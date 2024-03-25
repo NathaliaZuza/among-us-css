@@ -2,21 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    background-color: #DB2B39;
 }
 
 .container{
-    background-color: #DB2B39;
     position: relative;
     height: 100vh;
 }
+
 .amongUs_wrapper{
     height: 400px;
     width: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -65%);
+}
+
+.amongUs_wrapper::after{
+    content: "";
+    background-color: #cf2332;
+    /* border: 4px solid #351d04; */
+    height: 550px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 12px;
+    transform: translate(-50%, -45%);
+    z-index: -4;
 }
 
 .customize_btn{
@@ -73,6 +91,7 @@
     left: -18px;
     border-radius: 0 0 45px 45px;
     bottom: -100px;
+    z-index: 2;
 }
 
 .pernas::after{
@@ -135,7 +154,7 @@
     transform: translateX(-50%);
     position: absolute;
     bottom: -70px;
-    z-index: -4;
+    z-index: -2;
 }
 
 .visor{
@@ -233,4 +252,68 @@
     font-size: 18px;
     font-weight: 300;
     color: #fff;
+}
+
+@media screen and (max-width: 775px){
+    .amongUs_wrapper{
+        transform: translate(-50%, -50%) scale(0.8) ;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .amongUs_wrapper{
+        transform: translate(-50%, -50%) scale(0.7) ;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .amongUs_wrapper{
+        transform: translate(-50%, -50%) scale(0.6) ;
+    }
+}
+
+.bkg_corpo{
+    background-color: #c28822;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 0;
+}
+
+.bkg_corpo2, .bkg_corpo3{
+    position: absolute;
+    bottom: -40px;
+    left: -18px;
+    background-color: #351d04;
+    height: 90px;
+    width: 18px;
+    z-index: 6;
+}
+
+div.bkg_corpo3{
+    left: auto;
+    right: -18px;
+}
+
+.creditos{
+    color: #351d04;
+    text-align: center;
+    position: absolute;
+    bottom: -220px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+a{
+    color: #351d04;
+    font-weight: 500;
+    font-size: 20px;
 }
